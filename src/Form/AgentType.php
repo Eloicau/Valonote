@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Agent;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -13,7 +14,10 @@ class AgentType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('classe')
+            ->add('classe', EntityType::class, [
+                'class' => 'App\Entity\Classe',
+                'choice_label' => 'name',
+            ])
         ;
     }
 
