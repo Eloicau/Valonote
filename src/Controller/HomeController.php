@@ -14,6 +14,9 @@ class HomeController extends AbstractController
 
     public function home(): Response
     {
-        return new Response('Hello world');
+        return $this->render('base.html.twig', [
+            'title' => 'Home Page',
+        ]);
+
     }
 }

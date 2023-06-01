@@ -1,3 +1,18 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+agent:
+    path: /agent
+    controller: App\Controller\AgentController::index
+classe:
+    path: /classe
+    controller: App\Controller\ClasseController::index
+home:
+    path: /home
+    controller: App\Controller\HomeController::home
+map:
+    path: /map
+    controller: App\Controller\MapController::index
+note:
+    path: /note
+    controller: App\Controller\NoteController::index

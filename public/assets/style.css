@@ -1,0 +1,210 @@
+*{
+      margin: 0;
+    padding: 0;
+    --valoblue :#0f1923;
+    --valoOrange : #ff4655;
+    --valoBeige : #ece8e1 ;
+    --valoNoir : #111111;
+}
+html, body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: var(--valoBeige);
+    color: var(--valoNoir);
+    }
+    
+
+body {
+    font-family: sans-serif; 
+    font-size: 100%;
+}
+footer{
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background-color: var(--valoNoir);    
+    color: white;
+    padding: 0.3rem;
+    font-size: 0.7rem;
+    text-align: right;
+}
+
+h1{
+    margin: 0;
+}
+
+header{
+    background-color: var(--valoNoir);
+    color: white;
+}
+.container {
+    margin: auto;
+  }
+  
+  .navbar {
+    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+  }
+  
+  .navbar .menu-items {
+    display: flex;
+  }
+  
+  .navbar .nav-container li {
+    list-style: none;
+  }
+  
+  .navbar .nav-container a {
+    text-decoration: none;
+    color: var(--valoBeige);
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
+  
+  .navbar .nav-container a:hover{
+      font-weight: bolder;
+      color: var(--valoOrange);
+  }
+  
+  .nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+    margin: 0;
+  }
+  
+  .nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #ffffff;
+  }
+  
+  .nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .navbar .menu-items {
+    margin-top: 60px;
+    width: 100%;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    width: 50vw;
+    background-color: var(--valoNoir);
+    padding-top: 50px;
+    height: calc(100vh - 110px);
+  }
+  
+  .navbar .menu-items li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+    
+  .nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .logo{
+    display: none;
+  }
+
+  #main-content{
+    height: calc(100% - 82px);
+    padding: 3rem;
+  }
+
+  .note{
+    width: 25%;
+    background-color: var(--valoblue);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  #note{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+  button{
+    background-color: var(--valoblue);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  button a{
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+  }
+    button:hover{
+        background-color: var(--valoOrange);
+    }
