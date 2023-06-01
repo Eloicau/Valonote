@@ -252,3 +252,10 @@ form{
   gap: 1rem;
   align-items: flex-start;
 }
+
+.agent-bg {
+  background-image: url("../assets/img/VAL_State_of_Agents_Banner_v2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
