@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Note;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -13,9 +14,18 @@ class NoteType extends AbstractType
     {
         $builder
             ->add('text')
-            ->add('user')
-            ->add('agent')
-            ->add('map')
+            ->add('user', EntityType::class, [
+                'class' => 'App\Entity\User',
+                'choice_label' => 'name',
+            ])
+            ->add('agent', EntityType::class, [
+                'class' => 'App\Entity\Agent',
+                'choice_label' => 'name',
+            ])
+            ->add('map', EntityType::class, [
+                'class' => 'App\Entity\Map',
+                'choice_label' => 'name',
+            ])
         ;
     }
 
