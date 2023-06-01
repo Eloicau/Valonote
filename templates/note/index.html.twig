@@ -3,33 +3,23 @@
 {% block title %}Note index{% endblock %}
 
 {% block body %}
-    <h1>Note index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Text</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
+    <h1>Notes</h1>
+    <section id="note">
         {% for note in notes %}
-            <tr>
-                <td>{{ note.id }}</td>
-                <td>{{ note.text }}</td>
-                <td>
-                    <a href="{{ path('app_note_show', {'id': note.id}) }}">show</a>
-                    <a href="{{ path('app_note_edit', {'id': note.id}) }}">edit</a>
-                </td>
-            </tr>
+        <div class="note">
+            <p>{{ note.text }}</p>
+            <div>
+                <a href="{{ path('app_note_show', {'id': note.id}) }}">show</a>
+                <a href="{{ path('app_note_edit', {'id': note.id}) }}">edit</a>
+            </div>
+        </div>
         {% else %}
-            <tr>
-                <td colspan="3">no records found</td>
-            </tr>
+        <div class="note">
+            <p>Pas de note</p>
+        </div>
         {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_note_new') }}">Create new</a>
+    </section>
+    <button>
+        <a href="{{ path('app_note_new') }}">Créer note</a>
+    </button>
 {% endblock %}
