@@ -3,9 +3,14 @@
 {% block title %}New Agent{% endblock %}
 
 {% block body %}
+<main id="main-content" class="agent-bg">
+		<div class="map-child">
     <h1>Create new Agent</h1>
 
     {{ include('agent/_form.html.twig') }}
-
+<button>
     <a href="{{ path('app_agent_index') }}">back to list</a>
+</button>
+</div>
+</main>
 {% endblock %}
