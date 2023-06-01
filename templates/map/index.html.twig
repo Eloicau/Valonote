@@ -3,33 +3,38 @@
 {% block title %}Map index{% endblock %}
 
 {% block body %}
-    <h1>Map index</h1>
-
+    <main id="main-content" class="map-bg">
+    <div class="map-child">
+    <h1>List des Cartes</h1>
+    
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>actions</th>
+                <th>Nom</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
         {% for map in maps %}
             <tr>
-                <td>{{ map.id }}</td>
                 <td>{{ map.name }}</td>
                 <td>
-                    <a href="{{ path('app_map_show', {'id': map.id}) }}">show</a>
-                    <a href="{{ path('app_map_edit', {'id': map.id}) }}">edit</a>
+                <button>
+                    <a href="{{ path('app_map_edit', {'id': map.id}) }}">editer</a>
+                </button>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="3">no records found</td>
+                <td colspan="3">pas de carte trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_map_new') }}">Create new</a>
+    <button>
+        <a href="{{ path('app_map_new') }}">Ajouter carte</a>
+    </button>
+    </div>
+    </main>
 {% endblock %}
