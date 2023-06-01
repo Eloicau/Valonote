@@ -1,35 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Agent index{% endblock %}
+{% block title %}Agent index
+{% endblock %}
 
 {% block body %}
-    <h1>Agent index</h1>
+	<main id="main-content" class="agent-bg">
+		<div class="map-child">
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for agent in agents %}
-            <tr>
-                <td>{{ agent.id }}</td>
-                <td>{{ agent.name }}</td>
-                <td>
-                    <a href="{{ path('app_agent_show', {'id': agent.id}) }}">show</a>
-                    <a href="{{ path('app_agent_edit', {'id': agent.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="3">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+			<h1>Liste des agents</h1>
 
-    <a href="{{ path('app_agent_new') }}">Create new</a>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Nom</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for agent in agents %}
+						<tr>
+							<td>{{ agent.name }}</td>
+							<td>
+								<button>
+									<a href="{{ path('app_agent_edit', {'id': agent.id}) }}">edit</a>
+								</button>
+
+							</td>
+						</tr>
+					{% else %}
+						<tr>
+							<td colspan="3">Pas d'agent trouvé</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+			<button>
+				<a href="{{ path('app_agent_new') }}">Create new</a>
+			</button>
+
+		</div>
+	</main>
 {% endblock %}
