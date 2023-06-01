@@ -235,7 +235,7 @@ button:hover {
 td{
   gap: 1rem;
 }
-#map div, #agent div, #class div{
+#map div, #agent div, #classe div{
   display: flex;
   flex-direction: row;
   gap: 1rem;
