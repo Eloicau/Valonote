@@ -3,11 +3,16 @@
 {% block title %}Edit Classe{% endblock %}
 
 {% block body %}
-    <h1>Edit Classe</h1>
+	<main id="main-content" class="classe-bg">
+		<div class="map-child">
+
+    <h1>Editer Classe</h1>
 
     {{ include('classe/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('app_classe_index') }}">back to list</a>
-
     {{ include('classe/_delete_form.html.twig') }}
+    <button>
+    <a href="{{ path('app_classe_index') }}">Retour à la liste</a>
+</button>
+        </div>
+    </main>
 {% endblock %}
