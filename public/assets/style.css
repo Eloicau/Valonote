@@ -235,7 +235,7 @@ button:hover {
 td{
   gap: 1rem;
 }
-#map div, #agent div, #classe div{
+#map div, #agent div, #classe div, {
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -265,8 +265,8 @@ flex-direction: column;
   gap: 1rem;
 }
 
-.classe-bg {
-  background-image: url("../assets/img/New_Ranked.jpeg");
+.register-bg {
+  background-image: url("../assets/img/Valorant-In-Game-Tournament-Mode-fuites-details-date-de.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
