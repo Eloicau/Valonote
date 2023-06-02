@@ -3,14 +3,21 @@
 {% block title %}Note index{% endblock %}
 
 {% block body %}
+	<main id="main-content" class="note-bg">
+		<div class="map-child">
+
     <h1>Notes</h1>
-    <section id="note">
+    <section id="note-card">
         {% for note in notes %}
         <div class="note">
-            <p>{{ note.text }}</p>
+            <p> Agent : {{note.agent.name}}</p>
+            <p>Classe de l'agent {{note.agent.classe.name}}</p>
+            <p>Carte: {{note.map.name}}</p>
+            <p>Commentaire : {{ note.text }}</p>
             <div>
-                <a href="{{ path('app_note_show', {'id': note.id}) }}">show</a>
-                <a href="{{ path('app_note_edit', {'id': note.id}) }}">edit</a>
+            <button>
+                <a href="{{ path('app_note_edit', {'id': note.id}) }}">Editer</a>
+            </button>
             </div>
         </div>
         {% else %}
@@ -22,4 +29,6 @@
     <button>
         <a href="{{ path('app_note_new') }}">Créer note</a>
     </button>
+        </div>
+    </main>
 {% endblock %}

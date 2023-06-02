@@ -185,13 +185,16 @@ header {
 
 .note {
   width: 25%;
-  background-color: var(--valoblue);
-  color: white;
+  background-color: var(--valoBeige);
+  color: var(--valoNoir);
   padding: 2rem;
   border-radius: 10px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
 }
 
-#note {
+#note-card {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
@@ -235,13 +238,13 @@ button:hover {
 td{
   gap: 1rem;
 }
-#map div, #agent div, #classe div, {
+#map div, #agent div, #classe div,  {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   align-items: center;
 }
-input, select{
+input, select, textarea {
   padding: 0.4rem;
   border-radius: 10px;
   border: none;
@@ -259,10 +262,16 @@ form{
   background-size: cover;
   background-repeat: no-repeat;
 }
-#agent{
+#agent, #note{
   display: flex;
 flex-direction: column;
   gap: 1rem;
+}
+#note div{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
 }
 
 .register-bg {
@@ -277,4 +286,12 @@ flex-direction: column;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
+.note-bg {
+  background-image: url("../assets/img/Patch_Notes_PHX_SV0.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.title{
+  text-align: center;
+}
