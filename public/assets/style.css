@@ -271,3 +271,10 @@ flex-direction: column;
   background-size: cover;
   background-repeat: no-repeat;
 }
+.log-bg {
+  background-image: url("../assets/img/valwide_2560x1440-99f1632f76e12ddc17d4245a74f29fc5.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
