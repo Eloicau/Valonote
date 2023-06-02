@@ -3,33 +3,38 @@
 {% block title %}Classe index{% endblock %}
 
 {% block body %}
-    <h1>Classe index</h1>
+	<main id="main-content" class="classe-bg">
+		<div class="map-child">
+
+    <h1>Liste des Classe</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>actions</th>
+                <th>Nom</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
         {% for classe in classes %}
             <tr>
-                <td>{{ classe.id }}</td>
                 <td>{{ classe.name }}</td>
                 <td>
-                    <a href="{{ path('app_classe_show', {'id': classe.id}) }}">show</a>
-                    <a href="{{ path('app_classe_edit', {'id': classe.id}) }}">edit</a>
+                <button>
+                    <a href="{{ path('app_classe_edit', {'id': classe.id}) }}">Editer</a>
+                </button>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="3">no records found</td>
+                <td colspan="3">Aucune classe trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('app_classe_new') }}">Create new</a>
+    <button>
+    <a href="{{ path('app_classe_new') }}">Créer classe</a>
+</button>
+</div>
+</main>
 {% endblock %}
