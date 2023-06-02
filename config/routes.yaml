@@ -16,3 +16,6 @@ map:
 note:
     path: /note
     controller: App\Controller\NoteController::index
+login:
+    path: /login
+    controller: App\Controller\SecurityController::index
